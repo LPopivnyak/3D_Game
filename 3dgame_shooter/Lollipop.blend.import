@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ck11x4jnvpwq"
-path="res://.godot/imported/animation.blend-2cbcf8f3e5d62b959f7bcbab0dc1a681.scn"
+uid="uid://djwrato27gx6d"
+path="res://.godot/imported/Lollipop.blend-d611053475727aa28ff180da0e2e8c03.scn"
 
 [deps]
 
-source_file="res://animation.blend"
-dest_files=["res://.godot/imported/animation.blend-2cbcf8f3e5d62b959f7bcbab0dc1a681.scn"]
+source_file="res://Lollipop.blend"
+dest_files=["res://.godot/imported/Lollipop.blend-d611053475727aa28ff180da0e2e8c03.scn"]
 
 [params]
 

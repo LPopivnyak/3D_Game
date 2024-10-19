@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bqisfywb6w1xw"
-path="res://.godot/imported/animation.glb-b680e29dd05ce76bb7e94c21cb21e7e2.scn"
+uid="uid://dvsxolr4jmf00"
+path="res://.godot/imported/ChupaChups 2.glb-1a0d40430bb633762474ae217bf349b9.scn"
 
 [deps]
 
-source_file="res://animation.glb"
-dest_files=["res://.godot/imported/animation.glb-b680e29dd05ce76bb7e94c21cb21e7e2.scn"]
+source_file="res://ChupaChups 2.glb"
+dest_files=["res://.godot/imported/ChupaChups 2.glb-1a0d40430bb633762474ae217bf349b9.scn"]
 
 [params]
 

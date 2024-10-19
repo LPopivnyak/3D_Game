@@ -1,3 +1,75 @@
-[gd_scene format=3 uid="uid://b8sbwyxcxf1vo"]
+[gd_scene load_steps=11 format=3 uid="uid://b8sbwyxcxf1vo"]
+
+[ext_resource type="PackedScene" uid="uid://ck11x4jnvpwq" path="res://animation.blend" id="1_umjd6"]
+[ext_resource type="Script" path="res://character_body_3d.gd" id="1_w1tix"]
+[ext_resource type="PackedScene" uid="uid://cyvkdy3jrkwbs" path="res://CandyCane.tscn" id="3_j4xyi"]
+[ext_resource type="PackedScene" uid="uid://bheffvk0orj5r" path="res://ChupaChups 1.tscn" id="4_c2s38"]
+[ext_resource type="PackedScene" uid="uid://dbyhwehphaf86" path="res://Enemy.tscn" id="5_efwbo"]
+[ext_resource type="PackedScene" uid="uid://dfsey8sei2x12" path="res://ChupaChups 2.tscn" id="6_2f1md"]
+[ext_resource type="PackedScene" uid="uid://di04d270h2uyc" path="res://ChupaChups 3.tscn" id="7_xu4oy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3tayu"]
+size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lvmjm"]
+size = Vector3(95.9388, 1, 101.899)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6d0g3"]
+radius = 1.30832
+height = 3.14262
 
 [node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0103462, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00900936, 0, -0.0464518)
+mesh = SubResource("BoxMesh_3tayu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80363, 0, -1.68256)
+shape = SubResource("BoxShape3D_lvmjm")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("1_w1tix")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.73853, 0.21639)
+shape = SubResource("CapsuleShape3D_6d0g3")
+
+[node name="animation" parent="CharacterBody3D" instance=ExtResource("1_umjd6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59309, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+
+[node name="Node3D" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -12, -5)
+
+[node name="Node3D2" parent="CharacterBody3D" instance=ExtResource("4_c2s38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 4, 19)
+
+[node name="Node3D3" parent="CharacterBody3D" instance=ExtResource("5_efwbo")]
+transform = Transform3D(0.883136, 0, 0, 0, 0.930511, 0, 0, 0, 0.883136, 10, 1, 2)
+
+[node name="Node3D4" parent="CharacterBody3D" instance=ExtResource("6_2f1md")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 4, 6)
+
+[node name="Node3D5" parent="CharacterBody3D" instance=ExtResource("7_xu4oy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 4, -12)
+
+[node name="Node3D6" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
+transform = Transform3D(0.388769, 0, 0, 0, 0.388769, 0, 0, 0, 0.388769, 28, 1, 18)
+
+[node name="Node3D7" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -28)
+
+[node name="Node3D8" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
+transform = Transform3D(0.477103, 0, 0, 0, 0.756979, 0, 0, 0, 0.351603, -36.7592, 0.5, -35.7148)
+
+[node name="Node3D9" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.865, 0.5, 37.3545)
+
+[node name="Node3D10" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
+transform = Transform3D(0.649986, 0, 0, 0, 0.649986, 0, 0, 0, 0.649986, 20.3804, 0.5, 38.2671)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://di04d270h2uyc"]
+
+[ext_resource type="PackedScene" uid="uid://cgp5y43xhl6jp" path="res://ChupaChups 3.glb" id="1_701qn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_krihu"]
+radius = 2.0
+height = 10.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ChupaChups 3" parent="." instance=ExtResource("1_701qn")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_krihu")

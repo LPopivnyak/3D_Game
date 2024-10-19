@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bqisfywb6w1xw"
-path="res://.godot/imported/animation.glb-b680e29dd05ce76bb7e94c21cb21e7e2.scn"
+uid="uid://fsyrlkex2ng7"
+path="res://.godot/imported/CandyCane.glb-03c0e8989e2c7c24f7dc26eb9bddf69b.scn"
 
 [deps]
 
-source_file="res://animation.glb"
-dest_files=["res://.godot/imported/animation.glb-b680e29dd05ce76bb7e94c21cb21e7e2.scn"]
+source_file="res://CandyCane.glb"
+dest_files=["res://.godot/imported/CandyCane.glb-03c0e8989e2c7c24f7dc26eb9bddf69b.scn"]
 
 [params]
 

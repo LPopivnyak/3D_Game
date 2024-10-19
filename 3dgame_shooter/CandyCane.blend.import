@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ck11x4jnvpwq"
-path="res://.godot/imported/animation.blend-2cbcf8f3e5d62b959f7bcbab0dc1a681.scn"
+uid="uid://bfmodvsecsslq"
+path="res://.godot/imported/CandyCane.blend-63d53b473a37b5ce20c017c86746aa09.scn"
 
 [deps]
 
-source_file="res://animation.blend"
-dest_files=["res://.godot/imported/animation.blend-2cbcf8f3e5d62b959f7bcbab0dc1a681.scn"]
+source_file="res://CandyCane.blend"
+dest_files=["res://.godot/imported/CandyCane.blend-63d53b473a37b5ce20c017c86746aa09.scn"]
 
 [params]
 
