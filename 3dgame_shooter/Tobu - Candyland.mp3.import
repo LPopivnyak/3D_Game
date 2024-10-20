@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pnaa3v3lah1g"
+path="res://.godot/imported/Tobu - Candyland.mp3-8a174033c23afe29721d4adff1c9bb5e.mp3str"
+
+[deps]
+
+source_file="res://Tobu - Candyland.mp3"
+dest_files=["res://.godot/imported/Tobu - Candyland.mp3-8a174033c23afe29721d4adff1c9bb5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8sbwyxcxf1vo"]
+[gd_scene load_steps=15 format=3 uid="uid://b8sbwyxcxf1vo"]
 
 [ext_resource type="PackedScene" uid="uid://ck11x4jnvpwq" path="res://animation.blend" id="1_umjd6"]
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_w1tix"]
@@ -7,6 +7,19 @@
 [ext_resource type="PackedScene" uid="uid://dbyhwehphaf86" path="res://Enemy.tscn" id="5_efwbo"]
 [ext_resource type="PackedScene" uid="uid://dfsey8sei2x12" path="res://ChupaChups 2.tscn" id="6_2f1md"]
 [ext_resource type="PackedScene" uid="uid://di04d270h2uyc" path="res://ChupaChups 3.tscn" id="7_xu4oy"]
+[ext_resource type="AudioStream" uid="uid://pnaa3v3lah1g" path="res://Tobu - Candyland.mp3" id="8_5twy1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5w7g1"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_3244l"]
+sky_material = SubResource("ProceduralSkyMaterial_5w7g1")
+
+[sub_resource type="Environment" id="Environment_twv12"]
+background_mode = 2
+sky = SubResource("Sky_3244l")
+tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_3tayu"]
 size = Vector3(100, 1, 100)
@@ -19,6 +32,13 @@ radius = 1.30832
 height = 3.14262
 
 [node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_twv12")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0103462, 0, 0)
@@ -42,34 +62,43 @@ shape = SubResource("CapsuleShape3D_6d0g3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59309, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
+transform = Transform3D(-0.0043284, 0, -0.999991, 0, 1, 0, 0.999991, 0, -0.0043284, -3.7386, 3.25991, 0)
+current = true
 
-[node name="Node3D" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
+[node name="Node3D" parent="." instance=ExtResource("3_j4xyi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -12, -5)
 
-[node name="Node3D2" parent="CharacterBody3D" instance=ExtResource("4_c2s38")]
+[node name="Node3D2" parent="." instance=ExtResource("4_c2s38")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 4, 19)
 
-[node name="Node3D3" parent="CharacterBody3D" instance=ExtResource("5_efwbo")]
+[node name="Node3D3" parent="." instance=ExtResource("5_efwbo")]
 transform = Transform3D(0.883136, 0, 0, 0, 0.930511, 0, 0, 0, 0.883136, 10, 1, 2)
 
-[node name="Node3D4" parent="CharacterBody3D" instance=ExtResource("6_2f1md")]
+[node name="Node3D4" parent="." instance=ExtResource("6_2f1md")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 4, 6)
 
-[node name="Node3D5" parent="CharacterBody3D" instance=ExtResource("7_xu4oy")]
+[node name="Node3D5" parent="." instance=ExtResource("7_xu4oy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 4, -12)
 
-[node name="Node3D6" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
-transform = Transform3D(0.388769, 0, 0, 0, 0.388769, 0, 0, 0, 0.388769, 28, 1, 18)
+[node name="Node3D6" parent="." instance=ExtResource("3_j4xyi")]
+transform = Transform3D(-0.210383, -0.162312, 0.283787, -0.096663, 0.353265, 0.13039, -0.312309, 0, -0.231527, 28, 1, 18)
 
-[node name="Node3D7" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -28)
+[node name="Node3D7" parent="." instance=ExtResource("3_j4xyi")]
+transform = Transform3D(-0.552282, -0.146849, -0.820622, -0.10789, 0.988675, -0.104312, 0.826647, 0.0309272, -0.561871, 12, 1, -28)
 
-[node name="Node3D8" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
-transform = Transform3D(0.477103, 0, 0, 0, 0.756979, 0, 0, 0, 0.351603, -36.7592, 0.5, -35.7148)
+[node name="Node3D8" parent="." instance=ExtResource("3_j4xyi")]
+transform = Transform3D(0.105019, 0, -0.342979, -0.0876862, 0.743422, -0.0145819, 0.457066, 0.142622, 0.0760083, -36.7592, 0.5, -35.7148)
 
-[node name="Node3D9" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
+[node name="Node3D9" parent="." instance=ExtResource("3_j4xyi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.865, 0.5, 37.3545)
 
-[node name="Node3D10" parent="CharacterBody3D" instance=ExtResource("3_j4xyi")]
-transform = Transform3D(0.649986, 0, 0, 0, 0.649986, 0, 0, 0, 0.649986, 20.3804, 0.5, 38.2671)
+[node name="Node3D10" parent="." instance=ExtResource("3_j4xyi")]
+transform = Transform3D(-0.156739, 0, 0.630805, 0, 0.649986, 0, -0.630805, 0, -0.156739, 20.3804, 0.5, 38.2671)
+
+[node name="Node3D11" parent="." instance=ExtResource("3_j4xyi")]
+transform = Transform3D(-0.711541, 0.215667, -0.668728, 0.290068, 0.957006, 0, 0.639977, -0.193976, -0.743507, 32.3722, -5.57303, -27.0099)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_5twy1")
+volume_db = 1.905
+autoplay = true
